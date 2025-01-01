@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #1d4ed8;
+    --secondary: #87ceeb;
+    --accent: #b0e0e6;
+    --highlight: #b0c4de;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: Dancing;
+    src: url("./resources/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("./resources/fonts/Nunito/Nunito-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: MerriWeather;
+    src: url("./resources/fonts/Merriweather/Merriweather-Light.ttf");
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+@layer utilities {
+    .clip-path-polygon-mobile {
+        clip-path: polygon(0% 0%, 0% 85%, 100% 100%, 100% 0%);
+    }
+
+    .clip-path-polygon {
+        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        width: 90%;
+    }
+}
